@@ -11,8 +11,80 @@
       <title>Nutanix - Sign Up</title>
    </head>
    <body>
-      <h2>nutanix test</h2>
-
+      <div class="body-wrapper">
+         <div class="my-container">
+            <form autocomplete="off" id=”myForm” data-parsley-validate action="test.php" method="post" >
+               <h1>Create a My Nutanix account</h1>
+               <br>
+               <label for="firstName">First name</label>
+               <input type="text"
+                  name="firstName"
+                  id="firstName"
+                  data-parsley-required="true"
+                  data-value-missing="This field is required!"
+                  data-parsley-errors-container="#firstName-error"
+                  data-parsley-error-message="Enter your first name">
+               <span class="validation-error" id="firstName-error"></span>
+               <label for="lastName">Last name</label>
+               <input type="text"
+                  name="lastName"
+                  id="lastName"
+                  data-parsley-required="true"
+                  data-parsley-errors-container="#lastName-error"
+                  data-parsley-error-message="Enter your last name">
+               <span class="validation-error" id="lastName-error"></span>
+               <label for="email">Email</label>
+               <input type="email"
+                  name="email"
+                  id="email"
+                  data-parsley-required="true"
+                  data-parsley-gatekeeperemail="true"
+                  data-parsley-errors-container="#email-error"
+                  data-parsley-error-message="Enter a valid email address">
+               <span class="validation-error" id="email-error"></span>
+               <div class="password-container">
+                  <label for="password">Password</label>
+                  <div class="input-field-with-button">
+                     <input type="password"
+                        name="password"
+                        id="password"
+                        autocomplete="new-password"
+                        data-parsley-password="true"
+                        data-parsley-required="true"
+                        data-parsley-pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[~`$!@*#%&]).{6,}$/"
+                        data-parsley-errors-container="#password-error"
+                        data-parsley-required-message="Enter your password"
+                        data-parsley-pattern-message="Password doesn’t meet requirements"
+                        data-parsley-password-message="Password doesn’t meet requirements">
+                     <label class="input-show-button" id="toggle-signup-password">Show</label>
+                  </div>
+                  <span class="validation-error" id="password-error"></span>
+                  <div class="password-tooltip">
+                     <span class="password-tooltip-header"> Password must contain: </span>
+                     <div class="criteria criteria-minLength error-psw">
+                        <span class="validation-image"></span>
+                        <span>At least 6 characters</span>
+                     </div>
+                     <div class="criteria criteria-lowercase error-psw">
+                        <span class="validation-image"></span>
+                        <span>At least 1 lowercase letter</span>
+                     </div>
+                     <div class="criteria criteria-uppercase error-psw">
+                        <span class="validation-image"></span>
+                        <span>At least 1 uppercase letter</span>
+                     </div>
+                     <div class="criteria criteria-special error-psw">
+                        <span class="validation-image"></span>
+                        <span>A special character&nbsp;&nbsp;$!@*#%&amp;</span>
+                     </div>
+                  </div>
+               </div>
+               <button type="submit" id="btn-submit" class="btn btn-info btn-block"> Submit </button>
+            </form>
+         </div>
+      </div>
+      <script src="./js/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
       <script src="./js/main.js"></script>
    </body>
 </html>

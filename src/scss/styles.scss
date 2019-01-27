@@ -1,3 +1,31 @@
-body {
-	background-color: pink;
+@import "_colors";
+@import "_form";
+
+body, html {
+  font-family: Ntnx,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.body-wrapper {
+  background-color: $gray;
+  padding: 15px 0;
+  height: 100vh;
+}
+
+.my-container {
+  height: auto;
+  max-width: 360px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0 9px 9px 0 rgba(0,0,0,.02),0 3px 3px 0 rgba(0,0,0,.02),0 1px 1px 0 rgba(0,0,0,.02);
+  padding: 50px 30px;
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 0 auto;
+  line-height: normal;
+}
+
+
+#validation-image {
+    background: url(../images/red-oval.png) no-repeat;
+    height: 8px;
 }

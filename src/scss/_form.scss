@@ -3,29 +3,32 @@
   line-height: 16px;
   font-size: 23px;
   margin: 0;
-  text-transform: none; }
+  text-transform: none;
+}
 
 input[name="hpInput"] {
-  display: none; }
+  display: none;
+}
 
 .my-container label {
   display: block;
-  color: #627386;
+  color: $label;
   margin-bottom: 10px;
   margin-top: 20px;
   font-size: 14px;
   font-weight: 500;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+}
 
 input[type="email"], input[type="file"], input[type="password"], input[type="tel"], input[type="text"], select, textarea {
   font: 400 14px/16px Ntnx,Helvetica Neue,Helvetica,Arial,sans-serif;
   outline: 0;
-  border: 1px solid #B8BFCA;
-  border-top-color: #b8bfca;
-  border-right-color: #b8bfca;
-  border-bottom-color: #b8bfca;
-  border-left-color: #b8bfca;
+  border: 1px solid $border-input;
+  border-top-color: rgb(184, 191, 202);
+  border-right-color: rgb(184, 191, 202);
+  border-bottom-color: rgb(184, 191, 202);
+  border-left-color: rgb(184, 191, 202);
   border-radius: 4px;
   width: 100%;
   color: #424950 !important;
@@ -39,21 +42,25 @@ input[type="email"], input[type="file"], input[type="password"], input[type="tel
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
+  font-smoothing: antialiased;
+}
 
 .password-container {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+}
 
 .input-field-with-button {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 .input-field-with-button .input-show-button.input-show-button, .input-field-with-button .input-show-confirm-button.input-show-button, .input-field-with-button .input-show-reset-button.input-show-button {
   display: flex;
-  align-items: center; }
+  align-items: center;
+}
 
 .input-field-with-button .input-show-button, .input-field-with-button .input-show-confirm-button, .input-field-with-button .input-show-reset-button {
   border: 1px solid;
@@ -67,27 +74,33 @@ input[type="email"], input[type="file"], input[type="password"], input[type="tel
   box-sizing: border-box;
   border-radius: 0 4px 4px 0;
   border-left: none;
-  border-color: #B8BFCA;
-  width: 82px; }
+  border-color: $border-input;
+  width: 82px;
+}
 
 .input-show-button:hover {
   color: #22A5F7;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 .validation-error {
   line-height: .67;
-  color: #f55656; }
+  color: $red;
+}
 
 .validation-error ul.filled {
   padding-top: 11px;
   padding-left: 0;
-  font-size: 12px; }
+  font-size: 12px;
+}
 
 #password:focus + div.password-tooltip {
-  display: block; }
+  display: block;
+}
 
 .password-tooltip {
   display: none;
@@ -103,53 +116,36 @@ ul {
   margin-left: 6px;
   width: 250px;
   height: 138px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 1px 0px, rgba(0, 0, 0, 0.02) 0px 3px 3px 0px, rgba(0, 0, 0, 0.02) 0px 9px 9px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   padding: 16px 21px;
   border-radius: 4px;
-  margin-top: -90px; }
+  margin-top: -90px;
+}
 
 .criteria-minLength {
-  margin-top: 8px; }
+  margin-top: 8px;
+}
 
 .show {
-  display: block; }
+  display: block;
+}
 
 .validation-image {
-  display: inline-block;
-  width: 12px;
-  height: 8px;
-  margin-right: 2px; }
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-right: 2px;
+}
 
 .error-psw > .validation-image {
-  background: url(../images/red-oval.png) no-repeat; }
+   background: url(../images/red-oval.png) no-repeat;
+}
 
 .success-psw > .validation-image {
-  background: url(../images/check.png) no-repeat; }
+  background: url(../images/check.png) no-repeat;
+}
 
 .success-psw {
-  color: #36d068; }
-
-body, html {
-  font-family: Ntnx,Helvetica Neue,Helvetica,Arial,sans-serif; }
-
-.body-wrapper {
-  background-color: #f2f4f6;
-  padding: 15px 0;
-  height: 100vh; }
-
-.my-container {
-  height: auto;
-  max-width: 360px;
-  box-sizing: border-box;
-  position: relative;
-  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
-  padding: 50px 30px;
-  border-radius: 4px;
-  background-color: #fff;
-  margin: 0 auto;
-  line-height: normal; }
-
-#validation-image {
-  background: url(../images/red-oval.png) no-repeat;
-  height: 8px; }
+  color: $green;
+}
