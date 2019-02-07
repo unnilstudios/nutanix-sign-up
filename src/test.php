@@ -1,8 +1,10 @@
 <?php
+
 $firstname = $_POST['firstName'];
 $lastname = $_POST['lastName'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$hash = password_hash($password, PASSWORD_DEFAULT);
 
 if (!empty($firstname) || !empty($lastname) || !empty($email) || !empty($password))
     {
@@ -52,7 +54,7 @@ if (!empty($firstname) || !empty($lastname) || !empty($email) || !empty($passwor
             {
             $stmt->close();
             $stmt = $conn->prepare($INSERT);
-            $stmt->bind_param("ssss", $firstname, $lastname, $email, $password);
+            $stmt->bind_param("ssss", $firstname, $lastname, $email, $hash);
             $stmt->execute();
             echo "<h2>New record inserted sucessfully! Thank you $firstname $lastname<h2>";
             }
@@ -78,4 +80,3 @@ if (!empty($firstname) || !empty($lastname) || !empty($email) || !empty($passwor
     }
 
 ?>
-

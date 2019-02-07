@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2019 at 05:54 PM
+-- Generation Time: Feb 07, 2019 at 05:29 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -31,7 +31,7 @@ CREATE TABLE `register` (
   `firstname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `lastname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(40) COLLATE utf8_unicode_ci NOT NULL
+  `password` varchar(80) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `register` (
 --
 
 INSERT INTO `register` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES
-(1, 'Nemanja', 'Kostic', 'unnilstudios@gmail.com', '123test#N');
+(1, 'Nemanja', 'Kostic', 'unnilstudios@gmail.com', '$2y$10$odqR.040r6/bfCtEht2Zee94qgGFgcfkoauBStp4WcHkQI/UzMRye');
 
 --
 -- Indexes for dumped tables
